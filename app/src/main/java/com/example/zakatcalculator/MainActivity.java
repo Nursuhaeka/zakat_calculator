@@ -116,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
@@ -125,16 +126,16 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_about) {
-            // Navigate to About Us page
-            Intent intent = new Intent(this, AboutUsActivity.class);
-            startActivity(intent);
+            // Open About Us activity
+            Intent aboutIntent = new Intent(this, AboutUsActivity.class);
+            startActivity(aboutIntent);
             return true;
         } else if (id == R.id.action_share) {
-            // Share the app link
-            Intent shareIntent = new Intent();
-            shareIntent.setAction(Intent.ACTION_SEND);
-            shareIntent.putExtra(Intent.EXTRA_TEXT, "Check out this Zakat Calculator app!");
+            // Share app link
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
+            String shareMessage = "Check out this Zakat Calculator app!\n\nGitHub Repository: https://github.com/Nursuhaeka/zakat_calculator.git";
+            shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
             startActivity(Intent.createChooser(shareIntent, "Share via"));
             return true;
         }

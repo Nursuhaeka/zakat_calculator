@@ -13,7 +13,7 @@
         android:background="#B39DDB"
         android:title="Zakat Calculator"
         android:titleTextColor="@android:color/white"
-        android:elevation="4dp"/>
+        android:elevation="4dp" />
 
     <!-- Main Content -->
     <LinearLayout
@@ -33,16 +33,90 @@
             android:scaleType="centerCrop"
             android:background="@drawable/edit_text_border" />
 
-        <!-- About Information -->
-        <TextView
-            android:id="@+id/aboutInfo"
+        <!-- About Information Table -->
+        <TableLayout
+            android:id="@+id/aboutInfoTable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Name: Nursuhaeka Binti Muhammad Tang\nClass: D1CDCS2405A\nGender: Female\nPhone Number: 0195885049"
-            android:textSize="20sp"
-            android:textColor="#000000"
-            android:gravity="center" />
+            android:stretchColumns="1">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:textSize="18sp"
+                    android:textColor="#000000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nursuhaeka Binti Muhammad Tang"
+                    android:textSize="18sp"
+                    android:textColor="#000000" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class:"
+                    android:textSize="18sp"
+                    android:textColor="#000000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D1CDCS2405A"
+                    android:textSize="18sp"
+                    android:textColor="#000000" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender:"
+                    android:textSize="18sp"
+                    android:textColor="#000000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textSize="18sp"
+                    android:textColor="#000000" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number:"
+                    android:textSize="18sp"
+                    android:textColor="#000000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0195885049"
+                    android:textSize="18sp"
+                    android:textColor="#000000" />
+            </TableRow>
+
+        </TableLayout>
+
+        <!-- GitHub Link -->
+        <TextView
+            android:id="@+id/githubLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Nursuhaeka/zakat_calculator"
+            android:textSize="18sp"
+            android:textColor="#1E88E5"
+            android:gravity="center"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:onClick="openGitHub"
+            android:layout_gravity="center" />
 
         <!-- Copyright -->
         <TextView
@@ -50,7 +124,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:gravity=""
+            android:gravity="center"
             android:text="Copyright © 2024 Zakat Calculator App"
             android:textColor="#000000"
             android:textSize="15sp" />

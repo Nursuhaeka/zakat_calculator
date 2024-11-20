@@ -1,6 +1,9 @@
 package com.example.zakatcalculator;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -27,5 +30,11 @@ public class AboutUsActivity extends AppCompatActivity {
         // Handle the back button behavior
         finish(); // Closes the current activity and goes back to the previous one
         return true;
+    }
+
+    // Method to open GitHub link
+    public void openGitHub(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Nursuhaeka/zakat_calculator.git"));
+        startActivity(browserIntent);
     }
 }
