@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3E5F5">
+
+    <!-- Toolbar at the Very Top -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#B39DDB"
+        android:title="Zakat Calculator"
+        android:titleTextColor="@android:color/white"
+        android:elevation="4dp"/>
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <!-- Profile Picture -->
+        <ImageView
+            android:id="@+id/profilePicture"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/profile_picture"
+            android:layout_marginTop="32dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/edit_text_border" />
+
+        <!-- About Information -->
+        <TextView
+            android:id="@+id/aboutInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Name: Nursuhaeka Binti Muhammad Tang\nClass: D1CDCS2405A\nGender: Female\nPhone Number: 0195885049"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <!-- Copyright -->
+        <TextView
+            android:id="@+id/copyrightInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity=""
+            android:text="Copyright © 2024 Zakat Calculator App"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</LinearLayout>

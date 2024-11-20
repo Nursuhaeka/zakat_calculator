@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3E5F5">
+
+    <!-- Toolbar at the Very Top -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#B39DDB"
+        android:title="Zakat Calculator"
+        android:titleTextColor="@android:color/white"
+        android:elevation="4dp"/>
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Gold Weight Input -->
+        <EditText
+            android:id="@+id/goldWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Gold Weight (grams)"
+            android:background="@drawable/edit_text_border"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:layout_marginTop="32dp" />
+
+        <!-- Gold Value Input -->
+        <EditText
+            android:id="@+id/goldValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Gold Value (RM)"
+            android:background="@drawable/edit_text_border"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+        <!-- Spinner for Gold Type -->
+        <Spinner
+            android:id="@+id/goldTypeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#AA00FF"
+            android:popupBackground="#FFFFFF" />
+
+        <!-- Output Result -->
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:padding="16dp"
+            android:background="@drawable/edit_text_border"
+            android:text="Result will be displayed here"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@android:color/black" />
+
+        <!-- Calculate Button -->
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:backgroundTint="#AA00FF"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:padding="12dp" />
+    </LinearLayout>
+</LinearLayout>
+
+
+
